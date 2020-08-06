@@ -56,4 +56,15 @@ class StatsServiceTest {
 
     }
 
+    @org.junit.jupiter.api.Test
+    void calculateAmountMax() {
+        int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        StatsService service = new StatsService();
+
+        int expected = 5;
+        int actual = service.calculateAmountMax(sales);
+        assertEquals(expected, actual);
+
+    }
+
 }

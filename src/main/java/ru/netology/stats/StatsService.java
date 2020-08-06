@@ -1,6 +1,6 @@
 package ru.netology.stats;
 
-public class StatsService<sum> {
+public class StatsService {
 
     public int calculateSum(int[] sumAll) {
 
@@ -55,7 +55,20 @@ public class StatsService<sum> {
             if (item < currentMin)
                 i = i + 1;
         }
-        return amount;
+        return i;
+
+    }
+
+
+    public int calculateAmountMax(int[] sales) {
+        int amount = 0;
+        int currentMax = 15;
+        int i = 0;
+        for (int item : sales) {
+            if (item > currentMax)
+                i = i + 1;
+        }
+        return i;
 
     }
 }
