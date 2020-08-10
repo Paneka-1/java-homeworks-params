@@ -65,6 +65,8 @@ class StatsServiceTest {
         int actual = service.calculateAmountMax(sales);
         assertEquals(expected, actual);
 
+    
     }
+
 
 }

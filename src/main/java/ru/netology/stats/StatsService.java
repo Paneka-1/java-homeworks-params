@@ -63,12 +63,17 @@ public class StatsService {
     public int calculateAmountMax(int[] sales) {
         int amount = 0;
         int currentMax = 15;
-        int i = 0;
+        int count = 0;
         for (int item : sales) {
-            if (item > currentMax)
-                i = i + 1;
-        }
-        return i;
+            count++;
 
+            if (item > currentMax)
+                amount = count;
+            }
+        return amount;
     }
+
 }
+
+
+
