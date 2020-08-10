@@ -19,41 +19,31 @@ class StatsServiceTest {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int actual = service.calculateMediumSum(sales);
-        int expected = 15;
+        float actual = service.calculateMediumSum(sales);
+        float expected = 15;
         assertEquals(expected, actual);
 
-    }
-    @org.junit.jupiter.api.Test
-    void findMax() {
-        int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
-        StatsService service = new StatsService();
-
-        int expected = 8;
-        int actual = service.findMax(new int[]{8});
-        assertEquals(expected, actual);
 
 }
     @org.junit.jupiter.api.Test
-    void findMin() {
+    void findMinn() {
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int expected = 1;
-        int actual = service.findMin(new int[]{1});
+        int expected = 9;
+        int actual = service.findMinn(sales);
         assertEquals(expected, actual);
+
 
     }
-
     @org.junit.jupiter.api.Test
-    void calculateAmount() {
-        int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    void findMaxx() {
+        int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
-        int expected = 5;
-        int actual = service.calculateAmount(sales);
+        int expected = 8;
+        int actual = service.findMaxx(sales);
         assertEquals(expected, actual);
-
     }
 
     @org.junit.jupiter.api.Test
@@ -65,8 +55,18 @@ class StatsServiceTest {
         int actual = service.calculateAmountMax(sales);
         assertEquals(expected, actual);
 
-    
     }
 
+    @org.junit.jupiter.api.Test
+    void calculateAmountMin() {
+        int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        StatsService service = new StatsService();
+
+        int expected = 5;
+        int actual = service.calculateAmountMin(sales);
+        assertEquals(expected, actual);
+
+
+    }
 
 }

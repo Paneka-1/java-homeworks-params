@@ -12,9 +12,9 @@ public class StatsService {
         return sum;
     }
 
-    public int calculateMediumSum(int[] sales) {
-        int sum = 0;
-        for (int item : sales) {
+    public float calculateMediumSum(int[] sales) {
+        float sum = 0;
+        for (float item : sales) {
             sum = sum + item;
 
         }
@@ -22,37 +22,14 @@ public class StatsService {
     }
 
 
-    public int findMax(int[] sales) {
-
-        int maxNumber = sales[0];
-        int currentMax = 20;
-        int i;
-        for (i = 0; i < sales.length; i++) {
-            currentMax = Math.max(maxNumber, sales[i]);
-        }
-
-        return maxNumber;
-    }
-
-    public int findMin(int[] sales) {
-
-        int minNumber = sales[0];
-        int currentMax = 1;
-        int i;
-        for (i = 0; i > sales.length; i++) {
-            currentMax = Math.min(minNumber, sales[i]);
-        }
-
-        return minNumber;
-    }
 
 
-    public int calculateAmount(int[] sales) {
+    public int calculateAmountMax(int[] sales) {
         int amount = 0;
-        int currentMin = 15;
+        int mediumSum = 15;
         int i = 0;
         for (int item : sales) {
-            if (item < currentMin)
+            if (item > mediumSum)
                 i = i + 1;
         }
         return i;
@@ -60,20 +37,40 @@ public class StatsService {
     }
 
 
-    public int calculateAmountMax(int[] sales) {
+    public int calculateAmountMin(int[] sales) {
         int amount = 0;
-        int currentMax = 15;
-        int count = 0;
+        int mediumSum = 15;
+        int i = 0;
         for (int item : sales) {
-            count++;
+            if (item < mediumSum)
+                i = i + 1;
+        }
+        return i;
 
-            if (item > currentMax)
-                amount = count;
-            }
-        return amount;
     }
 
-}
 
+    public int findMaxx(int[]sales) {
+        int amount = sales[0];
+        int count = 0;
+        for (int item : sales){
+            if (amount < item){
+                count++;
+            }
+        }
+    return amount;
+    }
+
+    public int findMinn(int[]sales) {
+        int amount = sales[0];
+        int count = 0;
+        for (int item : sales){
+            if (amount > item){
+                count++;
+            }
+        }
+        return amount;
+    }
+}
 
 
