@@ -26,23 +26,23 @@ class StatsServiceTest {
 
 }
     @org.junit.jupiter.api.Test
-    void findMinn() {
+    void findMin() {
         int [] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         int expected = 9;
-        int actual = service.findMinn(sales);
+        int actual = service.findMin(sales);
         assertEquals(expected, actual);
 
 
     }
     @org.junit.jupiter.api.Test
-    void findMaxx() {
+    void findMax() {
         int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         StatsService service = new StatsService();
 
         int expected = 8;
-        int actual = service.findMaxx(sales);
+        int actual = service.findMax(sales);
         assertEquals(expected, actual);
     }
 
@@ -67,6 +67,6 @@ class StatsServiceTest {
         assertEquals(expected, actual);
 
 
-    }
 
+    }
 }

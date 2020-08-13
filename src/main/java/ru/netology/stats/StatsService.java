@@ -50,26 +50,33 @@ public class StatsService {
     }
 
 
-    public int findMaxx(int[]sales) {
-        int amount = sales[0];
+    public int findMin(int[] sales) {
+        int monthMin = sales[0];
+        int month = 0;
         int count = 0;
-        for (int item : sales){
-            if (amount < item){
-                count++;
-            }
-        }
-    return amount;
-    }
+        for (int item : sales) {
+            count++;
+            if (monthMin >= item) {
+                monthMin = item;
+                month = count;
 
-    public int findMinn(int[]sales) {
-        int amount = sales[0];
-        int count = 0;
-        for (int item : sales){
-            if (amount > item){
-                count++;
             }
         }
-        return amount;
+        return month;
+    }
+    public int findMax(int[] sales) {
+        int monthMax = sales[0];
+        int month = 0;
+        int count = 0;
+        for (int item : sales) {
+            count++;
+            if (monthMax <= item) {
+                monthMax = item;
+                month = count;
+
+            }
+        }
+        return month;
     }
 }
 
